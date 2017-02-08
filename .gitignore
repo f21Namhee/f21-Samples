@@ -359,4 +359,7 @@ __pycache__/
 # tools/**
 # !tools/packages.config
 
+bower_components
+node_modules
+
 # End of https://www.gitignore.io/api/node,bower,visualstudio,windows

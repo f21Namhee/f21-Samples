@@ -1,0 +1,17 @@
+{
+  "name": "f21-samples",
+  "description": "f21 html/script samples",
+  "main": "Default.html",
+  "authors": [
+    "Lee JongSeok(쫑) <lee_jongseok01@eland.co.kr>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/f21Namhee/f21-Samples",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
