@@ -17,4 +17,5 @@ npm install -g http-server
 설치 후
 
 ```
-httpserver -a localhost -p 9000 ```
+httpserver -a localhost -p 9000 
+```
