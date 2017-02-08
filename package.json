@@ -1,0 +1,19 @@
+{
+  "name": "f21-samples",
+  "version": "0.0.1",
+  "description": "f21 html/script samples",
+  "main": "Default.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f21Namhee/f21-Samples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/f21Namhee/f21-Samples/issues"
+  },
+  "homepage": "https://github.com/f21Namhee/f21-Samples#readme"
+}
