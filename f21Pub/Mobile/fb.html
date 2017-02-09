@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+	
+	var first_name = "FIRST"; 
+	var last_name = "LEE"; 
+	var full_name = "";
+	
+	function addName(strFirst, strLast) {
+		return strLast + " " + strFirst;
+	}
+	
+	$(function(){ // $(document).ready(function(){}); 
+		full_name = addName(first_name, last_name);
+		$("#fname").html(first_name);
+		$("#lname").html(last_name);
+		$("#fullname").html(full_name);
+	}); 
+	
+	
+	
+</script>
+</body>
+ <span id="fname"></span><br/>
+ <span id="lname"></span><br/>
+ <span id="fullname"></span>
+</html>

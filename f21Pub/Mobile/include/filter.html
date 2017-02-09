@@ -1,0 +1,122 @@
+﻿<!-- Filter list : Start -->
+<div id="filter_list" class="right_wrapper">
+	<div class="text_center space_10">絞込み</div>
+
+	<div class="filter_wrapper">
+		<!-- Filter Color : Start -->
+		<div class="item_filter filter">
+			<div class="filter_title">
+				<span>カラー</span>
+				 <div id="div_color_close" class="close_popup" style="" onclick="fnResetFilter('color');"></div>
+			</div>
+			<div class="filter_list" id="div_filter_color">
+				<ul>
+					<li><input type="checkbox" id="WHITE" name="WHITE" value="WHITE" onclick="fnCheckFilterClose('color');"><label for="WHITE"><span></span>White</label></li>
+					<li><input type="checkbox" id="BLACK" name="BLACK" value="BLACK" onclick="fnCheckFilterClose('color');"><label for="BLACK"><span></span>Black</label></li>
+					<li><input type="checkbox" id="GREY" name="GREY" value="GREY" onclick="fnCheckFilterClose('color');"><label for="GREY"><span></span>Grey</label></li>
+					<li><input type="checkbox" id="BROWN" name="BROWN" value="BROWN" onclick="fnCheckFilterClose('color');"><label for="BROWN"><span></span>Brown</label></li>
+					<li><input type="checkbox" id="TAN" name="TAN" value="TAN" onclick="fnCheckFilterClose('color');"><label for="TAN"><span></span>Tan</label></li>
+					<li><input type="checkbox" id="GREEN" name="GREEN" value="GREEN" onclick="fnCheckFilterClose('color');"><label for="GREEN"><span></span>Green</label></li>
+					<li><input type="checkbox" id="BLUE" name="BLUE" value="BLUE" onclick="fnCheckFilterClose('color');"><label for="BLUE"><span></span>Blue</label></li>
+					<li><input type="checkbox" id="DENIM" name="DENIM" value="DENIM" onclick="fnCheckFilterClose('color');"><label for="DENIM"><span></span>Denim</label></li>
+					<li><input type="checkbox" id="YELLOW" name="YELLOW" value="YELLOW" onclick="fnCheckFilterClose('color');"><label for="YELLOW"><span></span>Yellow</label></li>
+					<li><input type="checkbox" id="PURPLE" name="PURPLE" value="PURPLE" onclick="fnCheckFilterClose('color');"><label for="PURPLE"><span></span>Purple</label></li>
+					<li><input type="checkbox" id="RED" name="RED" value="RED" onclick="fnCheckFilterClose('color');"><label for="RED"><span></span>Red</label></li>
+					<li><input type="checkbox" id="ORANGE" name="ORANGE" value="ORANGE" onclick="fnCheckFilterClose('color');"><label for="ORANGE"><span></span>Orange</label></li>
+					<li><input type="checkbox" id="PINK" name="PINK" value="PINK" onclick="fnCheckFilterClose('color');"><label for="PINK"><span></span>Pink</label></li>
+					<li><input type="checkbox" id="OTHER" name="OTHER" value="OTHER" onclick="fnCheckFilterClose('color');"><label for="OTHER"><span></span>Other</label></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Filter Color : End -->
+
+		<!-- Filter Size : Start -->
+		<div class="item_size filter">
+			<div class="filter_title">
+				<span>サイズ</span>
+				<div id="div_size_close" class="close_popup" style="" onclick="fnResetFilter('size');"></div>
+			</div>
+			<div class="filter_list" id="div_filter_size">
+				<ul>
+					<li><input type="checkbox" value="X-Small" id="cb_filter_size_1"><label onclick="fnCheckUncheckFilter('cb_filter_size_1'); fnCheckFilterClose('size');">XS</label></li>
+					<li><input type="checkbox" value="Small" id="cb_filter_size_2"><label onclick="fnCheckUncheckFilter('cb_filter_size_2'); fnCheckFilterClose('size');">S</label></li>
+					<li><input type="checkbox" value="SM" id="cb_filter_size_3"><label onclick="fnCheckUncheckFilter('cb_filter_size_3'); fnCheckFilterClose('size');">SM</label></li>
+					<li><input type="checkbox" value="Medium" id="cb_filter_size_4"><label onclick="fnCheckUncheckFilter('cb_filter_size_4'); fnCheckFilterClose('size');">M</label></li>
+					<li><input type="checkbox" value="ML" id="cb_filter_size_5"><label onclick="fnCheckUncheckFilter('cb_filter_size_5'); fnCheckFilterClose('size');">ML</label></li>
+					<li><input type="checkbox" value="Large" id="cb_filter_size_6"><label onclick="fnCheckUncheckFilter('cb_filter_size_6'); fnCheckFilterClose('size');">L</label></li>
+					<li><input type="checkbox" value="X-Large" id="cb_filter_size_7"><label onclick="fnCheckUncheckFilter('cb_filter_size_7'); fnCheckFilterClose('size');">XL</label></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Filter Size : End -->
+
+		<!-- Filter Price : Start -->
+		<div class="item_price filter">
+			<div class="filter_title">
+				<span>価格</span>
+				<div id="div_price_close" class="close_popup" style="display:none;" onclick="fnResetFilter('price');"></div>
+			</div>
+			<div class="filter_list" id="div_filter_pricerange">
+				<div id="slider"></div>
+			</div>
+		</div>
+		<!-- Filter Price : End -->
+		
+		<!-- Filter Detail : Start -->
+		<div class="item_detail filter">
+			<div class="filter_title">
+				<span>トップス 詳細検索</span>
+				<div id="div_price_close" class="close_popup" style="" onclick="fnResetFilter('price');"></div>
+			</div>
+			<div class="filter_list" id="div_filter_detail">
+				<!-- List : Start -->
+				<strong>袖丈</strong>
+				<ul>
+					<li><input type="checkbox" id="" name="" value="" onclick=""><label for=""><span></span>ノースリーブ</label></li>
+					<li><input type="checkbox" id="" name="" value="" onclick=""><label for=""><span></span>半袖</label></li>
+					<li><input type="checkbox" id="" name="" value="" onclick=""><label for=""><span></span>７分袖</label></li>
+					<li><input type="checkbox" id="" name="" value="" onclick=""><label for=""><span></span>長袖</label></li>
+				</ul>
+				<!-- List : End -->
+				
+				<!-- List : Start -->
+				<strong>着丈</strong>
+				<ul>
+					<li><input type="checkbox" id="" name="" value="" onclick=""><label for=""><span></span>ノースリーブ</label></li>
+					<li><input type="checkbox" id="" name="" value="" onclick=""><label for=""><span></span>半袖</label></li>
+					<li><input type="checkbox" id="" name="" value="" onclick=""><label for=""><span></span>７分袖</label></li>
+					<li><input type="checkbox" id="" name="" value="" onclick=""><label for=""><span></span>長袖</label></li>
+				</ul>
+				<!-- List : End -->
+			</div>
+		</div>
+		<!-- Filter Detail : End -->
+
+		<div class="form_fields">
+			<button onclick="" class="float_left black">全体選択解除</button>
+			<button onclick="fnApplyFilter(); return false;" class="float_right black">選択条件検索</button>
+		</div>
+	</div>
+</div>
+<!-- Filter list : End -->
+
+<script type="text/javascript">
+	// Set price filter
+	$(window).load(function(){	
+		$("#slider").rangeSlider({
+			bounds:{min: 0, max: 15000},
+			defaultValues: { min: 0, max: 15000 },
+			step: 1
+		});
+		if(0 != '')
+			$("#slider").rangeSlider("min", 0);
+
+		if(100000 != '')
+			$("#slider").rangeSlider("max", 100000);
+
+		//todo: uncomment
+		/*$("#slider").bind("valuesChanged", function (e, data) {
+			fnCheckFilterClose('price');
+		});*/
+	});
+</script>
