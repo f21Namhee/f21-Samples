@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- HTML Cache 제거 -->
+    <meta http-equiv="Cache-Control" content="no-cache"/> 
+    <meta http-equiv="Expires" content="0"/> 
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta charset="utf-8">
+    <title>Anchor Test</title>
+    <!-- Css Section -->
+</head>
+<body>
+
+    <img src="http://img.forever21.co.kr/images/default_330/00250520-02.jpg" width="330" height="495"><br/>
+    <img src="http://img.forever21.co.kr/images/default_330/00236755-03.jpg" width="330" height="495"><br/>
+    <img src="http://img.forever21.co.kr/images/default_330/00237484-02.jpg" width="330" height="495"><br/>
+    <img src="http://img.forever21.co.kr/images/default_330/00212959-01.jpg" width="330" height="495"><br/>
+    <img src="http://img.forever21.co.kr/images/default_330/00236384-07.jpg" width="330" height="495"><br/>
+    <img src="http://img.forever21.co.kr/images/default_330/00321532-01.jpg" width="330" height="495"><br/>
+    <img src="http://img.forever21.co.kr/images/default_330/00207304-04.jpg" width="330" height="495"><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <div><a name="product"></a>이리로 이동 (Anchor : product)</div>
+    <img src="http://img.forever21.co.kr/images/default_330/00210137-02.jpg" width="330" height="495"><br/>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    //<!--[CDATA[
+        $(function(){
+            if(window.location.hash) {
+              var hash = window.location.hash;  
+              var anchorTag = $("a[name='"+ hash +"']");
+              $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+            } 
+        });
+    //]]-->
+    </script>
+    
+</body>
+</html>
