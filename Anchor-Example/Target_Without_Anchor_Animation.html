@@ -19,11 +19,21 @@
     <img src="http://img.forever21.co.kr/images/default_330/00321532-01.jpg" width="330" height="495"><br/>
     <img src="http://img.forever21.co.kr/images/default_330/00207304-04.jpg" width="330" height="495"><br/>
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <div><a name="product"></a>이리로 이동 (Anchor : product)</div>
+    <div id="ctl00_MainContent_WebShopTheGram1_divShopTheGram">이리로 이동 (id : ctl00_MainContent_WebShopTheGram1_divShopTheGram)</div>
     <img src="http://img.forever21.co.kr/images/default_330/00210137-02.jpg" width="330" height="495"><br/>
-    <img src="http://img.forever21.co.kr/images/default_330/00236384-07.jpg" width="330" height="495"><br/>
-    <img src="http://img.forever21.co.kr/images/default_330/00321532-01.jpg" width="330" height="495"><br/>
-    <img src="http://img.forever21.co.kr/images/default_330/00207304-04.jpg" width="330" height="495"><br/>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    //<!--[CDATA[
+        $(function(){
+            if(window.location.hash) {
+              var hash = window.location.hash.slice(1);
+              var target = $( "[id*='" + hash + "']" );
+              $('html,body').animate({scrollTop: target.offset().top},'slow');
+            } 
+        });
+    //]]-->
+    </script>
     
 </body>
 </html>
