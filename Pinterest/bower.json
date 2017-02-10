@@ -1,0 +1,29 @@
+{
+  "name": "pinterest-demo",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Lee JongSeok(쫑) <lee_jongseok01@eland.co.kr>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/f21Namhee/f21-Samples",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "eventEmitter": "4.x",
+    "eventie": ">=1.0.4 <2",
+    "imagesloaded": "^4.1.1",
+    "jquery": "1.9.1",
+    "wookmark": "^2.1.3"
+  },
+  "devDependencies": {
+    "jquery": "1.9.1",
+    "wookmark": "wookmark-jquery#^2.1.3",
+    "imagesloaded": "^4.1.1"
+  }
+}
