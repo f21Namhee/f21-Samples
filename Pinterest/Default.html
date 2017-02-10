@@ -14,23 +14,30 @@
 
   <div>
     <div>
-
-      <ul class="tiles-wrap animated" id="wookmark1">
-        <li><img src="assets/images/image_1.jpg" width="200" height="283"><p>1</p></li>
-        <li><img src="assets/images/image_2.jpg" width="200" height="300"><p>2</p></li>
-        <li><img src="assets/images/image_3.jpg" width="200" height="252"><p>3</p></li>
-        <li><img src="assets/images/image_4.jpg" width="200" height="158"><p>4</p></li>
-        <li><img src="assets/images/image_5.jpg" width="200" height="300"><p>5</p></li>
-        <li><img src="assets/images/image_6.jpg" width="200" height="297"><p>6</p></li>
-        <li><img src="assets/images/image_7.jpg" width="200" height="200"><p>7</p></li>
-        <li><img src="assets/images/image_8.jpg" width="200" height="200"><p>8</p></li>
-        <li><img src="assets/images/image_9.jpg" width="200" height="398"><p>9</p></li>
-        <li><img src="assets/images/image_10.jpg" width="200" height="267"><p>10</p></li>
-        <li><img src="assets/images/image_1.jpg" width="200" height="283"><p>11</p></li>
-        <li><img src="assets/images/image_2.jpg" width="200" height="300"><p>12</p></li>
-        <li><img src="assets/images/image_3.jpg" width="200" height="252"><p>13</p></li>
-        <li><img src="assets/images/image_4.jpg" width="200" height="158"><p>14</p></li>
-        <li><img src="assets/images/image_5.jpg" width="200" height="300"><p>15</p></li>
+      <div style="text-align:center;padding-top:20px;padding-bottom:20px;">
+        <ol id="filters">
+          <li data-filter="all">[ All ]</li>
+          <li data-filter="A">[ A ]</li>
+          <li data-filter="B">[ B ]</li>
+          <li data-filter="C">[ C ]</li>
+        </ol>
+      </div>
+      <ul class="tiles-wrap animated" id="tiles">
+        <li data-filter-class='["A","B"]'><img src="assets/images/image_1.jpg" width="200" height="283"><p>1.A,B</p></li>
+        <li data-filter-class='["B"]'><img src="assets/images/image_2.jpg" width="200" height="300"><p>2.B</p></li>
+        <li data-filter-class='["C"]' ><img src="assets/images/image_3.jpg" width="200" height="252"><p>3.C</p></li>
+        <li data-filter-class='["A"]'><img src="assets/images/image_4.jpg" width="200" height="158"><p>4.A</p></li>
+        <li data-filter-class='["A"]'><img src="assets/images/image_5.jpg" width="200" height="300"><p>5.A</p></li>
+        <li data-filter-class='["A"]'><img src="assets/images/image_6.jpg" width="200" height="297"><p>6.A</p></li>
+        <li data-filter-class='["B"]'><img src="assets/images/image_7.jpg" width="200" height="200"><p>7.B</p></li>
+        <li data-filter-class='["B","C"]'><img src="assets/images/image_8.jpg" width="200" height="200"><p>8.B,C</p></li>
+        <li data-filter-class='["C"]'><img src="assets/images/image_9.jpg" width="200" height="398"><p>9.C</p></li>
+        <li data-filter-class='["A"]'><img src="assets/images/image_10.jpg" width="200" height="267"><p>10.A</p></li>
+        <li data-filter-class='["B"]'><img src="assets/images/image_1.jpg" width="200" height="283"><p>11.B</p></li>
+        <li data-filter-class='["C"]'><img src="assets/images/image_2.jpg" width="200" height="300"><p>12.C</p></li>
+        <li data-filter-class='["C"]'><img src="assets/images/image_3.jpg" width="200" height="252"><p>13.C</p></li>
+        <li data-filter-class='["C"]'><img src="assets/images/image_4.jpg" width="200" height="158"><p>14.C</p></li>
+        <li data-filter-class='["C","A"]'><img src="assets/images/image_5.jpg" width="200" height="300"><p>15.C,A</p></li>
       </ul>
 
       <hr>
