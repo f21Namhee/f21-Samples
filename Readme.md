@@ -9,9 +9,9 @@ PRD 빌드 상태 : [![Build Status](http://jenkins.ileadon.com/buildStatus/icon
 - 활용할 만한 JavaScript 등 코딩을 모아둔 Repository
 
 
-# Directory 
+# Directories
 
-**- Anchor-Example **
+**- Anchor-Example**
   
   책갈피(Anchor) 태그 활용하기 (외부링크로 원하는 영역에 Focus 맞추는 작업)
 
@@ -27,11 +27,11 @@ PRD 빌드 상태 : [![Build Status](http://jenkins.ileadon.com/buildStatus/icon
 
   반응형일때 이미지 맵을 잡는 Plugin 사용 
 
-**- WayPoint **
+**- WayPoint**
 
   웹 / 모바일 환경에서 Scroll에 따라 페이지를 로딩할 수 있는 Waypoint trigger plugin 사용 
   ( Json과 함깨 사용 )
 
-**- Templates **
+**- Templates**
 
   무료 HTML Template 모음
