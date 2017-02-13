@@ -33,21 +33,97 @@ img {
 .owl-carousel .owl-item {
     float: left;
 }
+#owl-product .owl-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+.owl-theme .owl-controls {
+    text-align: center;
+    width: 100%;
+}
+#owl-product .owl-controls .owl-pagination {
+    text-align: right;
+}
+
+.owl-pagination {
+    width: 100%;
+    text-align: center;
+}
+.owl-theme .owl-controls .owl-page {
+    display: inline-block;
+    zoom: 1;
+}
+.owl-controls .owl-page, .owl-controls .owl-buttons div {
+    cursor: pointer;
+}
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:focus span {
+    filter: Alpha(Opacity=100);
+    opacity: 1;
+}
+.owl-theme .owl-controls .owl-page span {
+    display: block;
+    width: 7px;
+    height: 7px;
+    margin: 5px 4px;
+    filter: Alpha(Opacity=40);
+    opacity: .4;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background: #000;
+    border: 1px solid #000;
+}
 </style>
-<div id="owl-product-wrapper" style="display:block;">
-    <div id="owl-product">
-        <div class="item"><img src="http://www.forever21.com/images/default_750/00118305-01.jpg" class="photo-item" data-height="1125" data-width="750" /></div>
-        <div class="item"><img src="http://www.forever21.com/images/2_side_750/00118305-01.jpg" class="photo-item" data-height="1125" data-width="750" /></div>
-        <div class="item"><img src="http://www.forever21.com/images/3_back_750/00118305-01.jpg" class="photo-item" data-height="1125" data-width="750" /></div>
-        <div class="item"><img src="http://www.forever21.com/images/7_additional_750/00118305-01.jpg"  class="photo-item" data-height="1125" data-width="750" /></div>
+    <div id="owl-product-wrapper" style="display:block;">
+        <div id="owl-product">
+            <div class="item"><img src="http://www.forever21.com/images/default_750/00118305-01.jpg" class="photo-item" data-height="1125" data-width="750" /></div>
+            <div class="item"><img src="http://www.forever21.com/images/2_side_750/00118305-01.jpg" class="photo-item" data-height="1125" data-width="750" /></div>
+            <div class="item"><img src="http://www.forever21.com/images/3_back_750/00118305-01.jpg" class="photo-item" data-height="1125" data-width="750" /></div>
+            <div class="item"><img src="http://www.forever21.com/images/7_additional_750/00118305-01.jpg"  class="photo-item" data-height="1125" data-width="750" /></div>
+        </div>
     </div>
-</div>
+
+    <!-- PhotoSwipe : Start -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Photo Swipe : End  -->
     
     <!--Javascript Section-->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/owl.carousel.js"></script>
     <script type="text/javascript">
     //<!--[CDATA[
+    //-- Slider
      $("#owl-product").owlCarousel({
         loop: false,
         margin: 10,
@@ -63,6 +139,45 @@ img {
         });
     }    
 
+       //-- PhotoSwipe 
+        $(function () {
+
+            var items = [];
+            var imgsrc, width, height;
+
+
+            $(".photo-item").each(function (idx) {
+
+                imgsrc = $(this).attr("src");    //-- 이미지 경로 
+                width = $(this).data("width");    //-- 이미지 최대 가로 크기 (확대시)  
+                height = $(this).data("height");  //-- 이미지 최대 세로 크기 (확대시)
+
+                items.push({
+                    src: imgsrc,
+                    w: width,
+                    h: height
+                });
+
+                $(this).on("click", function () {
+                    openPhotoSwipe(idx);
+                });
+
+            });
+            function openPhotoSwipe(show_idx) {
+
+                var pswpElement = document.querySelectorAll('.pswp')[0];
+                var options = {
+                    index: show_idx,   //-- 클릭한 이미지가 보이게
+                    history: false,
+                    focus: false,
+                    showAnimationDuration: 0,
+                    hideAnimationDuration: 0
+                };
+
+                var zoomPanel = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                zoomPanel.init();
+            };
+        });
     //]]-->
     </script>
 </body>
