@@ -11,6 +11,12 @@
 </head>
 <body>
 <style>
+img {
+    border: 0;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
 .owl-carousel {
     overflow: hidden;
     display: block;
@@ -48,7 +54,14 @@
         items: 1,
         afterInit: owlAfterInit($(".owl-item .item img"))
     });
-        
+    //-- Slider Action
+    function owlAfterInit(selector) {
+        var imgList = selector;
+
+        imgList.each(function () {
+            $(this).show();
+        });
+    }    
 
     //]]-->
     </script>
