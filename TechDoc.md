@@ -9,6 +9,8 @@
 * [Q-Dir](http://www.softwareok.com/?Download=Q-Dir)
 * [mRemoteNg](https://mremoteng.org/download)
 * [WinMerge](http://winmerge.org)
+* [Harupad](http://pad.haroopress.com/user.html)
+* [Markdown / Doc-HaruPad](http://pad.haroopress.com/page.html?f=markdown)
 
 
 ### GIT
