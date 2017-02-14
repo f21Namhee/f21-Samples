@@ -1,7 +1,7 @@
 ### Index
 
 * [Freeware](#freeware)
-* [Git](#GIT)
+* [Git](#git)
 
 
 ### Freeware
