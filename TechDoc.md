@@ -1,10 +1,10 @@
 ### Index
 
 * [Freeware](#freeware)
-* [Git](#Git)
+* [Git](#GIT)
 
 
-### Freeware (다운로드)
+### Freeware
 
 * [Q-Dir](http://www.softwareok.com/?Download=Q-Dir)
 * [mRemoteNg](https://mremoteng.org/download)
