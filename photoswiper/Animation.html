@@ -7,10 +7,6 @@
     <meta http-equiv="Pragma" content="no-cache"/>
     <meta charset="utf-8">
     <title>photoswiper</title>
-    <link rel="stylesheet" href="js/photoswipe/photoswipe.css">
-    <link rel="stylesheet" href="js/photoswipe/default-skin/default-skin.css">
-    <script src="js/photoswipe/photoswipe.min.js"></script>
-    <script src="js/photoswipe/photoswipe-ui-default.min.js"></script> 
     <!-- Css Section -->
     <!-- photoswipe css -->
     <link rel="stylesheet" href="assets/plugins/photoswipe/photoswipe.css"> 
@@ -134,32 +130,6 @@ img {
     <script type="text/javascript" src="assets/plugins/photoswipe/photoswipe-ui-default.min.js"></script> 
     <script type="text/javascript">
     //<!--[CDATA[
-<<<<<<< HEAD
-    //-- Slider
-     $("#owl-product").owlCarousel({
-        loop: false,
-        margin: 10,
-        items: 1,
-        afterInit: owlAfterInit($(".owl-item .item img"))
-    });
-    //-- Slider Action
-    function owlAfterInit(selector) {
-        var imgList = selector;
-
-        imgList.each(function () {
-            $(this).show();
-        });
-    }    
-
-    //-- PhotoSwipe 
-    $(function () {
-
-        var items = [];
-        var imgsrc, width, height;
-
-
-        $(".photo-item").each(function (idx) {
-=======
     
        //-- PhotoSwipe 
         $(function () {
@@ -191,19 +161,11 @@ img {
 
             $(".photo-item").each(function (idx) { //-- 클래스명이 photo-item 인 요소들 전체를 돌림 ( 여러개 일때 배열로 인식됨 ) 
             // 여기서 idx 는 photo-item 요소들이 여러개 일때 배열로 인식, 그 배열의 인덱스를 말함 
->>>>>>> 7760adc0f1b176c0250a44855d59908d0d3150bd
 
-            imgsrc = $(this).attr("src");    //-- 이미지 경로 
-            width = $(this).data("width");    //-- 이미지 최대 가로 크기 (확대시)  
-            height = $(this).data("height");  //-- 이미지 최대 세로 크기 (확대시)
+                imgsrc = $(this).attr("src");    //-- 이미지 경로 
+                width = $(this).data("width");    //-- 이미지 최대 가로 크기 (확대시)  
+                height = $(this).data("height");  //-- 이미지 최대 세로 크기 (확대시)
 
-<<<<<<< HEAD
-            items.push({
-                src: imgsrc,
-                w: width,
-                h: height
-            });
-=======
                 items.push({  //-- items 배열에 값 입력 
                     src: imgsrc,
                     w: width,
@@ -217,39 +179,37 @@ img {
                 $(this).on("click", function () { //-- 클래스명이 photo-item 인 각 이미지 배열원소에 click 이벤트 적용 
                     openPhotoSwipe(idx); //-- 줌 패널
                 });
->>>>>>> 7760adc0f1b176c0250a44855d59908d0d3150bd
 
-            $(this).on("click", function () {
-                openPhotoSwipe(idx);
             });
-<<<<<<< HEAD
-=======
 
 
             function openPhotoSwipe(show_idx) {
->>>>>>> 7760adc0f1b176c0250a44855d59908d0d3150bd
+                
+                var photoItems = $("img.photo-item");
+                alert(photoItems.length);
+                var pswpElement = document.querySelectorAll('.pswp')[0];
+                var options = {
+                    index: show_idx,   //-- 클릭한 이미지가 보이게
+                    history: false,
+                    focus: false,
+                    showAnimationDuration: 0,
+                    hideAnimationDuration: 0,
+                    getThumbBoundsFn: function(index) {
+                        var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                            pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                            rect = thumbnail.getBoundingClientRect(); 
 
-        });
-        function openPhotoSwipe(show_idx) {
+                        return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+                    }
+                    
+                };
 
-            var pswpElement = document.querySelectorAll('.pswp')[0];
-            var options = {
-                index: show_idx,   //-- 클릭한 이미지가 보이게
-                history: false,
-                focus: false,
-                showAnimationDuration: 0,
-                hideAnimationDuration: 0
+                var zoomPanel = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                zoomPanel.init();
             };
 
-<<<<<<< HEAD
-            var zoomPanel = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-            zoomPanel.init();
-        };
-    });
-=======
 
         });
->>>>>>> 7760adc0f1b176c0250a44855d59908d0d3150bd
     //]]-->
     </script>
 </body>
