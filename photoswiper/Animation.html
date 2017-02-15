@@ -184,14 +184,24 @@ img {
 
 
             function openPhotoSwipe(show_idx) {
-
+                
+                var photoItems = $("img.photo-item");
+                alert(photoItems.length);
                 var pswpElement = document.querySelectorAll('.pswp')[0];
                 var options = {
                     index: show_idx,   //-- 클릭한 이미지가 보이게
                     history: false,
                     focus: false,
                     showAnimationDuration: 0,
-                    hideAnimationDuration: 0
+                    hideAnimationDuration: 0,
+                    getThumbBoundsFn: function(index) {
+                        var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                            pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                            rect = thumbnail.getBoundingClientRect(); 
+
+                        return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+                    }
+                    
                 };
 
                 var zoomPanel = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
