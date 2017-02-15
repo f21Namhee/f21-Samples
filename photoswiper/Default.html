@@ -7,6 +7,10 @@
     <meta http-equiv="Pragma" content="no-cache"/>
     <meta charset="utf-8">
     <title>photoswiper</title>
+    <link rel="stylesheet" href="js/photoswipe/photoswipe.css">
+    <link rel="stylesheet" href="js/photoswipe/default-skin/default-skin.css">
+    <script src="js/photoswipe/photoswipe.min.js"></script>
+    <script src="js/photoswipe/photoswipe-ui-default.min.js"></script> 
     <!-- Css Section -->
 </head>
 <body>
@@ -139,45 +143,45 @@ img {
         });
     }    
 
-       //-- PhotoSwipe 
-        $(function () {
+    //-- PhotoSwipe 
+    $(function () {
 
-            var items = [];
-            var imgsrc, width, height;
+        var items = [];
+        var imgsrc, width, height;
 
 
-            $(".photo-item").each(function (idx) {
+        $(".photo-item").each(function (idx) {
 
-                imgsrc = $(this).attr("src");    //-- 이미지 경로 
-                width = $(this).data("width");    //-- 이미지 최대 가로 크기 (확대시)  
-                height = $(this).data("height");  //-- 이미지 최대 세로 크기 (확대시)
+            imgsrc = $(this).attr("src");    //-- 이미지 경로 
+            width = $(this).data("width");    //-- 이미지 최대 가로 크기 (확대시)  
+            height = $(this).data("height");  //-- 이미지 최대 세로 크기 (확대시)
 
-                items.push({
-                    src: imgsrc,
-                    w: width,
-                    h: height
-                });
-
-                $(this).on("click", function () {
-                    openPhotoSwipe(idx);
-                });
-
+            items.push({
+                src: imgsrc,
+                w: width,
+                h: height
             });
-            function openPhotoSwipe(show_idx) {
 
-                var pswpElement = document.querySelectorAll('.pswp')[0];
-                var options = {
-                    index: show_idx,   //-- 클릭한 이미지가 보이게
-                    history: false,
-                    focus: false,
-                    showAnimationDuration: 0,
-                    hideAnimationDuration: 0
-                };
+            $(this).on("click", function () {
+                openPhotoSwipe(idx);
+            });
 
-                var zoomPanel = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-                zoomPanel.init();
-            };
         });
+        function openPhotoSwipe(show_idx) {
+
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+            var options = {
+                index: show_idx,   //-- 클릭한 이미지가 보이게
+                history: false,
+                focus: false,
+                showAnimationDuration: 0,
+                hideAnimationDuration: 0
+            };
+
+            var zoomPanel = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+            zoomPanel.init();
+        };
+    });
     //]]-->
     </script>
 </body>
